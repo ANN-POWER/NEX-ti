@@ -1,0 +1,65 @@
+<view class="page {{showResult ? 'theme-' + resultTheme : ''}}">
+  <view class="container">
+    <view class="card">
+      <view class="title">NEX-ti for NEX2Y</view>
+      <image class="title-image" src="../../img/nexzoo2.jpg" mode="widthFix" />
+      <view wx:if="{{!showResult}}" class="quiz-area">
+        <view class="meta">
+          <text class="progress-text">第 {{currentIndex + 1}} 题 / 共 {{questions.length}} 题</text>
+          <view class="progress">
+            <view class="progress-bar" style="width: {{progress}}%;"></view>
+          </view>
+        </view>
+
+        <view class="question-title">{{currentQuestion.question}}</view>
+
+        <view wx:if="{{currentQuestion.image}}" class="question-image-wrap">
+          <image class="question-image" src="{{currentQuestion.image}}" mode="widthFix" />
+        </view>
+
+        <view class="options">
+          <block wx:for="{{currentOptions}}" wx:key="text" wx:for-item="option" wx:for-index="idx">
+            <button class="option-btn {{selectedOptionIndex === option.originalIndex ? 'option-btn-selected' : ''}}" hover-class="option-btn-hover" data-index="{{option.originalIndex}}" bindtap="answerQuestion">
+              <view class="option-inner">
+                <text class="option-label">{{option.label}}</text>
+                <text class="option-text">{{option.text}}</text>
+              </view>
+            </button>
+          </block>
+        </view>
+
+        <view class="actions">
+          <button class="secondary-btn" bindtap="goToPreviousQuestion" disabled="{{currentIndex === 0}}">
+            上一题
+          </button>
+        </view>
+
+      </view>
+      <view wx:if="{{showResult}}" class="result-area">
+        <view class="result-block hero-block">
+          <view class="block-label">MATCH RESULT</view>
+          <view class="result-title"> {{resultProfile.code}}</view>
+          <view class="result-title"> {{resultProfile.name}}</view>
+          <image class="result-image" src="../../img/fox2y.jpg" mode="widthFix" />
+          <view class="result-desc">{{resultDescription}}</view>
+        </view>
+
+        <view class="result-block">
+          <view class="block-label">BAR CHART</view>
+          <view class="section-title">七呐柱状图</view>
+          <view class="member-chart">
+            <block wx:for="{{memberBars}}" wx:key="key">
+              <view class="member-bar-item">
+                <image class="member-bar-image" src="{{item.src}}" mode="scaleToFill" style="height: {{item.heightRpx}}rpx;" />
+                <text class="member-bar-name">{{item.name}}</text>
+                <text class="member-bar-score">{{item.score}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+
+        <button class="primary-btn" bindtap="resetQuiz">重新测试</button>
+      </view>
+    </view>
+  </view>
+</view>

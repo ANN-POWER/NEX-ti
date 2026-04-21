@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEX-ti for NEX2Y</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>NEX-ti for NEX2Y</h1>
+      <p class="subtitle">NEXZ，犄角爆料！</p>
+
+      <div id="quiz-area">
+        <div class="meta">
+          <span id="progress-text">第 1 题 / 共 20 题</span>
+          <div class="progress">
+            <div id="progress-bar"></div>
+          </div>
+        </div>
+
+        <h2 id="question-title"></h2>
+        <div class="options">
+          <button id="option-a" class="option-btn"></button>
+          <button id="option-b" class="option-btn"></button>
+        </div>
+        <div class="actions">
+          <button id="prev-btn" class="secondary-btn" disabled>上一题</button>
+        </div>
+      </div>
+
+      <section id="result-area" class="hidden">
+        <section class="result-block hero-block">
+          <p class="block-label">MATCH RESULT</p>
+          <h2>你的匹配结果是：<span id="mbti-type"></span></h2>
+          <p id="mbti-description"></p>
+        </section>
+
+        <section class="result-grid">
+          <article class="result-block">
+            <p class="block-label">DIMENSION</p>
+            <h3>性格维度概览</h3>
+            <div id="dimension-breakdown" class="breakdown"></div>
+          </article>
+
+          <article class="result-block">
+            <p class="block-label">RADAR CHART</p>
+            <h3>结果雷达图</h3>
+            <canvas id="radar-canvas" width="320" height="260"></canvas>
+          </article>
+        </section>
+
+        <section class="result-block">
+          <p class="block-label">SHARE</p>
+          <h3>分享你的结果</h3>
+          <p class="share-tip">点击生成分享图后，可保存并发送到社交平台。</p>
+          <div class="share-actions">
+            <button id="share-btn" class="primary-btn">生成分享图</button>
+            <a id="download-link" class="secondary-btn hidden" download="idol-result.png">下载分享图</a>
+          </div>
+          <canvas id="share-canvas" class="hidden" width="1080" height="1080"></canvas>
+        </section>
+
+        <button id="restart-btn" class="primary-btn">重新测试</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

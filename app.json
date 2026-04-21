@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/quiz/quiz"
+  ],
+  "window": {
+    "navigationBarTitleText": "NEX-ti for NEX2Y",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

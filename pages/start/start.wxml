@@ -1,0 +1,12 @@
+<view class="start-page">
+  <view class="start-card">
+    <view class="start-title">NEX-ti for NEX2Y</view>
+
+    <view class="start-image-wrap">
+      <image class="start-image" src="https://i.ibb.co/DgDct3rv/nexzoo.jpg" mode="widthFix" />
+    </view>
+
+    <view class="start-btn-shadow"></view>
+    <button class="start-btn" hover-class="start-btn-hover" bindtap="goToQuiz">开始测试</button>
+  </view>
+</view>
