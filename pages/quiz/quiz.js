@@ -14,18 +14,18 @@ const dimensionLabels = {
 
 
 const memberWeights = {
-  E: [9, 10, 8, 6, 0, 4, 2],
-  I: [1, 0, 1, 6, 10, 12, 11],
-  L: [8, 10, 7, 6, 1, 6, 2],
-  S: [10, 7, 2, 6, 9, 5, 2],
-  X: [2, 3, 10, 3, 9, 2, 7],
-  P: [2, 7, 9, 4, 9, 3, 8]
+  E: [8, 10, 8, 6, 0, 2, 2],
+  I: [4, 0, 1, 7, 12, 12, 12],
+  L: [6, 10, 6, 8, 0, 8, 3.5],
+  S: [12, 5, 2, 5, 9, 5.5, 3],
+  X: [2, 2, 10, 3, 9, 2.5, 8.5],
+  P: [2, 10, 10, 7, 10, 7, 7.5]
 };
 
 const OPTION_FEEDBACK_DELAY = 240;
 
 const memberImageUrls = [
-  "https://i.ibb.co/XxwGTxLL/m1.png",
+  "https://i.ibb.co/gMzD95vR/m1.png",
   "https://i.ibb.co/Lh5RmCvX/m2.png",
   "https://i.ibb.co/WWSrtCHT/m3.png",
   "https://i.ibb.co/6727sk2D/m4.png",
@@ -112,6 +112,11 @@ Page({
   },
 
   onLoad() {
+    const app = getApp();
+    if (app && typeof app.playBgm === "function") {
+      app.playBgm();
+    }
+
     this.optionCache = {};
     const sessionQuestions = getQuizQuestions();
     this.setData({

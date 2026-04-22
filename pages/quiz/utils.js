@@ -1,9 +1,12 @@
-const HIGH_X_THRESHOLD = 14;
-const HIGH_S_THRESHOLD = 23;
-const HIGH_E_THRESHOLD = 19;
+const HIGH_E_THRESHOLD = 16;
+const HIGH_I_THRESHOLD = 16;
+
+const HIGH_P_THRESHOLD = 20;
 const HIGH_L_THRESHOLD = 20;
-const HIGH_P_THRESHOLD = 17;
-const HIGH_I_THRESHOLD = 19;
+const HIGH_S_THRESHOLD = 17;
+const HIGH_X_THRESHOLD = 15;
+
+// P L有7项互斥
 
 const dimensionThresholds = {
   E: HIGH_E_THRESHOLD,
@@ -14,8 +17,10 @@ const dimensionThresholds = {
   P: HIGH_P_THRESHOLD
 };
 
-const alpha = 0.35;
-const beta = 0.6;
+const a1 = 0.1;
+const a2 = 0.35;
+const a3 = 0.6;
+
 function getInitialScores() {
   return { E: 0, I: 0, L: 0, S: 0, X: 0, P: 0 };
 }
@@ -53,9 +58,9 @@ function getResultKey(scores) {
   const { E, I, L, S, X, P } = scores;
 
   // 第一优先级：高洞察力组
-  if (P > HIGH_P_THRESHOLD * alpha) {
-    if (L > HIGH_L_THRESHOLD * alpha) {
-      if (E >= HIGH_E_THRESHOLD * beta) {
+  if (P > HIGH_P_THRESHOLD * a2) {
+    if (L > HIGH_L_THRESHOLD * a1) {
+      if (E >= I + 4) {
         return "RTH";
       } else if (I > E + 2) {
         return "MIRACLE";
@@ -63,16 +68,15 @@ function getResultKey(scores) {
     } else {
       return "MAFIA";
     }
-  } else if (S > HIGH_S_THRESHOLD * alpha) {
+  } else if (S > HIGH_S_THRESHOLD * a2) {
     // 第三优先级：高辅助组
-    if (I > HIGH_I_THRESHOLD * beta) {
+    if (I > HIGH_I_THRESHOLD * a2) {
       return "FOREST";
     }
-    else {
+    else if (E < HIGH_E_THRESHOLD * a3) {
       return "MAJIA";
     }
-
-  } else if (X > HIGH_X_THRESHOLD * alpha) {
+  } else if (X > HIGH_X_THRESHOLD * a2) {
     // 第二优先级：高搞怪组
     if (I > E + 2 && P > 0) {
       return "QUEEN";
@@ -81,13 +85,13 @@ function getResultKey(scores) {
     } else {
       return "AJEOSSI";
     }
-  } else if (E >= HIGH_E_THRESHOLD * beta) {
+  } else if (E >= HIGH_E_THRESHOLD * a3) {
     // 第四优先级：基础能量组
     return "EEEE";
-  } else if (E > I) {
-    return "HAHA";
-  } else {
+  } else if (P <= 1 || L <= 1) {
     return "O_RLY";
+  } else {
+    return "HAHA";
   }
 }
 
