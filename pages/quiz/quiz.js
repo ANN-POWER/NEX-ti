@@ -1,13 +1,6 @@
 const { getQuizQuestions } = require("./data");
-const { calculateResult, getInitialScores } = require("./utils");
+const { calculateResult, getInitialScores, dimensionThresholds } = require("./utils");
 const { resultProfiles } = require("./result-data");
-
-const HIGH_X_THRESHOLD = 14;
-const HIGH_S_THRESHOLD = 23;
-const HIGH_E_THRESHOLD = 19;
-const HIGH_L_THRESHOLD = 20;
-const HIGH_P_THRESHOLD = 17;
-const HIGH_I_THRESHOLD = 19;
 
 
 const dimensionLabels = {
@@ -19,15 +12,6 @@ const dimensionLabels = {
   P: "洞察力"
 };
 
-
-const dimensionThresholds = {
-  E: HIGH_E_THRESHOLD,
-  I: HIGH_I_THRESHOLD,
-  L: HIGH_L_THRESHOLD,
-  S: HIGH_S_THRESHOLD,
-  X: HIGH_X_THRESHOLD,
-  P: HIGH_P_THRESHOLD
-};
 
 const memberWeights = {
   E: [9, 10, 8, 6, 0, 4, 2],

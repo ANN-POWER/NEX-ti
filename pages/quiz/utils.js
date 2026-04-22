@@ -5,6 +5,15 @@ const HIGH_L_THRESHOLD = 20;
 const HIGH_P_THRESHOLD = 17;
 const HIGH_I_THRESHOLD = 19;
 
+const dimensionThresholds = {
+  E: HIGH_E_THRESHOLD,
+  I: HIGH_I_THRESHOLD,
+  L: HIGH_L_THRESHOLD,
+  S: HIGH_S_THRESHOLD,
+  X: HIGH_X_THRESHOLD,
+  P: HIGH_P_THRESHOLD
+};
+
 const alpha = 0.35;
 const beta = 0.6;
 function getInitialScores() {
@@ -94,5 +103,6 @@ function calculateResult(answers, questionList) {
 
 module.exports = {
   calculateResult,
-  getInitialScores
+  getInitialScores,
+  dimensionThresholds
 };
