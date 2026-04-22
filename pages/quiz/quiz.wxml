@@ -45,8 +45,8 @@
         </view>
 
         <view class="result-block">
-          <view class="block-label">BAR CHART</view>
-          <view class="section-title">七呐柱状图</view>
+          <view class="block-label">MY NEXZ DNA</view>
+          <view class="section-title">七呐成分表——和我最像的成员是……？</view>
           <view class="member-chart">
             <block wx:for="{{memberBars}}" wx:key="key">
               <view class="member-bar-item">
