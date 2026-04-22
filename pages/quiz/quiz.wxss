@@ -307,6 +307,20 @@
   color: #6b7280;
 }
 
+.result-signature {
+  margin-top: 22rpx;
+  padding-top: 10rpx;
+  text-align: center;
+}
+
+.result-signature-line {
+  display: block;
+  margin-top: 6rpx;
+  font-size: 20rpx;
+  line-height: 1.5;
+  color: #64748b;
+}
+
 .theme-mafia {
   background:
     radial-gradient(circle at 15% 15%, rgba(148, 163, 184, 0.22), transparent 32%),

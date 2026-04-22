@@ -59,6 +59,11 @@
         </view>
 
         <button class="primary-btn" bindtap="resetQuiz">重新测试</button>
+
+        <view class="result-signature">
+          <text class="result-signature-line">出品：Chaeriz、芒果汁大猫、宵夜Kyle、junjun22、Fay</text>
+          <text class="result-signature-line">联系我们：Chaeriz@qq.com</text>
+        </view>
       </view>
     </view>
   </view>
