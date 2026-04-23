@@ -34,6 +34,8 @@ const memberImageUrls = [
   "https://i.ibb.co/5hLRwnhf/m7.png"
 ];
 
+const memberNames = ["YU", "TOMOYA", "HARU", "SO GEON", "SEITA", "HYUI", "YUKI"];
+
 function getResultTheme(resultKey) {
   if (resultKey === "MAFIA") {
     return "mafia";
@@ -77,14 +79,20 @@ function buildMemberBars(scores) {
     }
   });
 
-  const maxScore = Math.max(...members, 1);
+  const minScore = Math.min(...members);
+  const maxScore = Math.max(...members);
+  const minHeight = 96;
+  const maxHeight = 276;
+  const scoreRange = maxScore - minScore;
 
   return members.map((score, index) => ({
     key: `z${index + 1}`,
-    name: `z${index + 1}`,
+    name: memberNames[index],
     src: memberImageUrls[index],
     score: Number(score.toFixed(2)),
-    heightRpx: Math.round(96 + (score / maxScore) * 180)
+    heightRpx: scoreRange > 0
+      ? Math.round(minHeight + ((score - minScore) / scoreRange) * (maxHeight - minHeight))
+      : Math.round((minHeight + maxHeight) / 2)
   }));
 }
 

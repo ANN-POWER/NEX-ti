@@ -275,13 +275,17 @@
 
 .member-chart {
   margin-top: 18rpx;
+  padding: 16rpx 0;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  border-radius: 14rpx;
+  background: rgba(237, 233, 254, 0.55);
 }
 
 .member-bar-item {
-  width: 84rpx;
+  width: 72rpx;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -295,8 +299,10 @@
 
 .member-bar-name {
   margin-top: 8rpx;
-  font-size: 20rpx;
+  font-size: 18rpx;
   font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
   color: #4b5563;
 }
 

@@ -1,4 +1,4 @@
-const BGM_URL = "https://fito.cc/7yw";
+const BGM_URL = "https://videotourl.com/audio/1776929147213-4d0b92fd-f911-4426-a7f3-b89fdd1ad0f9.m4a";
 const BGM_TITLE = "NEX-ti for NEX2Y BGM";
 
 App({

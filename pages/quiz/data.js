@@ -256,7 +256,7 @@ const fixedQuestions = [
     question: "当你感到压力很大时，哪种解压方式最适合你？",
     options: [
       { text: "约朋友出去大吃一顿，吐槽发泄", type: ["E"] },
-      { text: "一个人出去跑步或散步，整理心情", type: ["I"] },
+      { text: "一个人出去跑步或散步，整理心情", type: ["I", "I"] },
       { text: "找个偏僻的角落大哭一场", type: ["I"] },
       { text: "制定一个新的计划表，用忙碌对抗焦虑", type: ["L", "P"] }
     ]
@@ -305,6 +305,27 @@ const fixedQuestions = [
       { text: "像记事本，填满各种计划和攻略", type: ["L"] },
       { text: "像避风港，会留意大家的情绪", type: ["S"] },
       { text: "像万花筒，充满了各种天马行空的奇怪想法", type: ["X"] }
+    ]
+  },
+  {
+    id: 27,
+    question: "以下哪句歌词最适合形容你？",
+    options: [
+      { text: "Not typical.", type: [] },
+      { text: "Keep going higher higher~ Like a burning fire fire.", type: ["L"] },
+      { text: "I'll do whatever you say.", type: [] },
+      { text: "Keep your eyes on me.", type: ["E"] },
+      { text: "Nalilada da nalilada.", type: [] }
+    ]
+  },
+  {
+    id: 28,
+    question: "你觉得自己最大的“超能力”是什么？",
+    options: [
+      { text: "能敏锐察觉到朋友情绪的变化，并给予安慰。", type: ["S", "P"] },
+      { text: "无论多复杂的机器或软件，上手就能学会。", type: ["P"] },
+      { text: "能把平淡无奇的日子过得像综艺节目一样有趣。", type: ["X"] },
+      { text: "拥有稳定的情绪和积极的心态，不轻易崩溃。", type: ["L"] }
     ]
   }
 
