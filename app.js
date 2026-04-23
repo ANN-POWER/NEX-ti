@@ -20,10 +20,6 @@ const BGM_LIST = [
     url: "https://videotourl.com/audio/1776929917438-b026729a-e8d9-48b7-8d19-aca23acd655f.m4a"
   },
   {
-    title: "Make it Better",
-    url: "https://videotourl.com/audio/1776929976439-ec7eb9be-8047-4f5b-ae63-5b8939c309ab.m4a"
-  },
-  {
     title: "One Day",
     url: "https://videotourl.com/audio/1776930043209-ff7f320f-2272-4840-83c2-8252189dbd71.m4a"
   },

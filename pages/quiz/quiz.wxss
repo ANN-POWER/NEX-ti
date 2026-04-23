@@ -33,6 +33,7 @@
   line-height: 1.35;
   word-break: break-all;
   color: #612094;
+
 }
 
 .title-image {
@@ -214,12 +215,11 @@
 }
 
 .result-block {
-  margin-top: 14rpx;
+  margin: 20rpx auto;
   padding: 20rpx;
   border-radius: 16rpx;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(196, 181, 253, 0.35);
-}
+  background: rgba(237, 233, 254, 0.55);
+  background: linear-gradient(125deg, rgba(245, 243, 255, 0.92) 0%, rgba(252, 231, 243, 0.92) 100%);}
 
 .hero-block {
   background: linear-gradient(125deg, rgba(245, 243, 255, 0.92) 0%, rgba(252, 231, 243, 0.92) 100%);
@@ -244,7 +244,8 @@
 }
 
 .result-desc {
-  margin-top: 30rpx;
+  margin: 15rpx;
+  margin-bottom: 0;
   font-size: 28rpx;
   line-height: 1.7;
   color: #374151;
@@ -259,15 +260,15 @@
 
 .result-image {
   display: block;
-  width: 100%;
-  margin-top: 12rpx;
+  width: 80%;
+  margin: 12rpx auto;
   border-radius: 16rpx;
   background: #f8fafc;
   animation: floatY 3s ease-in-out infinite;
 }
 
 .section-title {
-  margin-top: 6rpx;
+  margin: 6rpx;
   font-size: 30rpx;
   font-weight: 600;
   color: #2d1b69;
@@ -280,11 +281,10 @@
   align-items: flex-end;
   justify-content: center;
   border-radius: 14rpx;
-  background: rgba(237, 233, 254, 0.55);
 }
 
 .member-bar-item {
-  width: 72rpx;
+  width: 90rpx;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -292,14 +292,14 @@
 }
 
 .member-bar-image {
-  width: 72rpx;
+  width: 90rpx;
   border-radius: 10rpx;
   background: transparent;
 }
 
 .member-bar-name {
   margin-top: 8rpx;
-  font-size: 18rpx;
+  font-size: 14rpx;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
@@ -308,7 +308,7 @@
 
 .member-bar-score {
   margin-top: 4rpx;
-  font-size: 18rpx;
+  font-size: 16rpx;
   color: #6b7280;
 }
 

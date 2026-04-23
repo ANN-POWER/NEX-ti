@@ -1,7 +1,7 @@
 <view class="page {{showResult ? 'theme-' + resultTheme : ''}}">
   <view class="container">
     <view class="card">
-      <view class="title">NEX-ti for NEX2Y</view>
+      <view class="title">NEX-ti for NEX2Y      </view>
       <image class="title-image" src="../../img/nexzoo2.jpg" mode="widthFix" />
       <view wx:if="{{!showResult}}" class="quiz-area">
         <view class="meta">
@@ -61,6 +61,9 @@
         <button class="primary-btn" bindtap="resetQuiz">重新测试</button>
 
         <view class="result-signature">
+          <view class="result-signature"></view>
+          <text class="result-signature-line">测试结果仅供娱乐（^-^）</text>
+          <text class="result-signature-line">部分素材源于网络，如有侵权请联系删除</text>
           <text class="result-signature-line">出品：Chaeriz、芒果汁大猫、宵夜Kyle、junjun22、Fay</text>
           <text class="result-signature-line">联系我们：chaeriz@qq.com</text>
         </view>

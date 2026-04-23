@@ -81,8 +81,8 @@ function buildMemberBars(scores) {
 
   const minScore = Math.min(...members);
   const maxScore = Math.max(...members);
-  const minHeight = 96;
-  const maxHeight = 276;
+  const minHeight = 170;
+  const maxHeight = 360;
   const scoreRange = maxScore - minScore;
 
   return members.map((score, index) => ({
