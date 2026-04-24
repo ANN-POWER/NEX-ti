@@ -14,12 +14,12 @@ const dimensionLabels = {
 
 
 const memberWeights = {
-  E: [8, 10, 8, 6, 0, 2, 2],
-  I: [4, 0, 1, 7, 12, 12, 12],
-  L: [6, 10, 6, 8, 0, 8, 3.5],
+  E: [9, 9, 8, 6, 0, 3.5, 2],
+  I: [4, 0, 1, 7, 11, 12, 12],
+  L: [6, 10, 4.5, 8.5, 0, 8, 3.5],
   S: [12, 5, 2, 5, 9, 5.5, 3],
-  X: [2, 2, 10, 3, 9, 2.5, 8.5],
-  P: [2, 10, 10, 7, 10, 7, 7.5]
+  X: [2, 2.5, 10, 3, 9, 2.5, 8.5],
+  P: [2, 9, 9, 6.5, 8, 5, 7.5]
 };
 
 const OPTION_FEEDBACK_DELAY = 240;
@@ -81,8 +81,8 @@ function buildMemberBars(scores) {
 
   const minScore = Math.min(...members);
   const maxScore = Math.max(...members);
-  const minHeight = 170;
-  const maxHeight = 360;
+  const minHeight = 130;
+  const maxHeight = 260;
   const scoreRange = maxScore - minScore;
 
   return members.map((score, index) => ({

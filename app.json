@@ -4,7 +4,7 @@
     "pages/quiz/quiz"
   ],
   "window": {
-    "navigationBarTitleText": "NEX-ti for NEX2Y",
+    "navigationBarTitleText": "NEX-ti TEST",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
     "backgroundTextStyle": "light"

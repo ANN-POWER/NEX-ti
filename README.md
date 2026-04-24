@@ -13,7 +13,12 @@
 - [pages/quiz/utils.js](pages/quiz/utils.js)：答题计分与结果判定逻辑。
 - [pages/quiz/result-data.js](pages/quiz/result-data.js)：各结果类型的文案和展示信息。
 - [scripts/result-probability.js](scripts/result-probability.js)：结果概率模拟脚本，用于随机答题统计各结果出现概率。
-- [img/](img/)：项目图片资源目录。
+- [img/](img/)：项目图片资源目录（微信小程序限制图片、音频大小不能超过200K）。
+
+## 辅助文件床
+
+图床CDN：<https://imgbb.com/>
+音频CDN：<https://www.videotourl.com/zh/tools/mp3-to-url>
 
 ## 出品
 

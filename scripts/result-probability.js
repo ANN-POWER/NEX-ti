@@ -1,3 +1,5 @@
+// node .\scripts\result-probability.js
+
 const path = require("path");
 
 const { getQuizQuestions } = require(path.join(__dirname, "..", "pages", "quiz", "data"));
